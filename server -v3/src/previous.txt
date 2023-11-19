@@ -1,0 +1,28 @@
+// app.ts
+import express from 'express';
+import mongoose from 'mongoose';
+import userRoutes from './path-to-your/UserRoutes';
+
+const app = express();
+
+mongoose
+  .connect('mongodb+srv://admin:admin@project0api.6qm7wiw.mongodb.net/?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('Failed to connect to MongoDB:', error);
+  });
+
+app.use(express.json());
+
+app.use('/api', userRoutes);
+
+app.get('/', (req, res) => {
+  res.send('hello node api');
+});
+
+app.listen(3000, () => console.log('server up!'));
