@@ -7,6 +7,7 @@
     "dev": "nodemon --watch dist --exec node dist/server.js",
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+    "ts": "tsc -w"
   },
   "keywords": [],
   "author": "",
