@@ -6,7 +6,7 @@ const GetCategories = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products/topFive`)
+      .get(`https://team-1-qrzb.onrender.com/products/topFive`)
       .then((res) => {
         setTopCars(res.data);
       })
