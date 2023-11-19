@@ -8,7 +8,7 @@ const GetCategories = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products/${category}`)
+      .get(`https://team-1-qrzb.onrender.com/products/${category}`)
       .then((res) => {
         setCars(res.data);
       })
