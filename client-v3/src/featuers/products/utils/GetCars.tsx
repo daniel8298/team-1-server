@@ -9,7 +9,7 @@ const GetCars = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products/model/${model}`)
+      .get(`https://team-1-qrzb.onrender.com/products/model/${model}`)
       .then((res) => {
         setCar(res.data);
       })
